@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+
+form.showProfile button {
+    float: left;
+    min-width: 10%;
+    height: auto;
+    padding: 5px;
+    background: #112539;
+    color: white;
+    font-size: auto;
+    border: 0px solid grey;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 10px;
+    position: absolute;
+
+}
+
+button[name=like]
+{
+    background-image: url('like.png');
+    background-size: 25px 25px; 
+    border: none;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    background-color: #4c5e70;
+    float: left;
+}
+
+button[name=dislike]
+{
+    background-image: url('dislike.png');
+    background-size: 25px 25px; 
+    border: none;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    background-color: #4c5e70;
+    float: left;
+}
+
+button[name=rejeek]
+{
+    position: relative;
+    background-color: #4c5e70;
+    float: left;
+    margin-top: 5px;
+    border:none;
+    font-size: 12px;
+}
+.jeek
+{
+    display: inline-table;
+    background-color: #4c5e70;
+    width: 60%;
+    height: auto;   
+    left: 20%;
+    position: relative;
+}
+
+h1.title{
+    margin-left: 20%;  
+}
+
+.content{
+    position: relative;
+    margin-left: 20px; 
+    margin-top: 50px; 
+}
+
+.userTitle{
+
+}
+
+.counts{
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 1px gray solid;
+}
+.operations{
+    margin: 5px;
+    margin-left:20px ;
+    float: left;
+    position: relative;
+    display: inline-block;
+}
+
+
+.operations:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+
+</style>
+	</head>
+  <body style="background-color: #2c3e50;">
+  	<div style="background-color: #34495e; position: relative; top: -20px ; width:  100%; overflow: hidden; height: 60px;">
+    <div align="right" style="margin: 25px 50px 0px 0px; text-align: right; color: #7f8c8d;"> Hi <var id="name">Guest</var> ! | <a href="/logout"> Log out </a></div>
+    <div align="left"  style="margin: -50px 0px 0px 25px; text-align: left;"> <h1 style="color: black;"> JEEKJEEK </h1> </div>
+    </div>
+
+    <br>
+    <h1 class="title"> Details </h1>
+    <div class="jeek">
+        <div class="userTitle">
+        <form action="/showProfile" method="post" class="showProfile">
+            <var id="showProfile"><input type="hidden" name="username" value="1234abcd"></var>
+            <button><var id="displayName">Diyar</var></button>
+        </form>
+        </div>
+            <div class="content">
+            <p><var id="text">this is a test jeek</var></p>
+            <p><var id="tags">#test</var></p>
+            <p><var id="mentions">@diyar</var></p>
+            </div>
+
+            <div class="counts">
+            <pre>#Likes     <var id="likes">0</var>     #Rejeeks     <var id="rejeeks">0</var></pre>
+            </div>
+            <!-- OPERATIONS -->
+
+
+    </div>
+  </body>
+
+</html>
